@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JSON Data Display</title>
   <style>
-    #red-block {
-      background-color: red;
+    #yellow-block {
+      background-color: yellow;
       padding: 10px;
       margin: 10px;
     }
@@ -17,7 +17,7 @@
   <a href="#" onclick="loadData('languages')">Мови</a>
   <a href="#" onclick="loadData('students')">Студенти</a>
 
-  <div id="red-block"></div>
+  <div id="yellow-block"></div>
 
   <script>
     function loadData(dataType) {
@@ -28,8 +28,8 @@
     }
 
     function displayData(dataType, data) {
-      var redBlock = document.getElementById('red-block');
-      redBlock.innerHTML = '';
+      var yellowBlock = document.getElementById('yellow-block');
+      yellowBlock.innerHTML = '';
 
       var jsonData = JSON.parse(data);
       var ul = document.createElement('ul');
@@ -40,7 +40,7 @@
         ul.appendChild(li);
       });
 
-      redBlock.appendChild(ul);
+      yellowBlock.appendChild(ul);
     }
   </script>
 
